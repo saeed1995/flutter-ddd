@@ -30,7 +30,9 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       }
 
       if(dataState is DataFailed){
+
         emit(state.copyWith(newCwStatus: CwError(dataState.error!)));
+        
       }
     });
 
